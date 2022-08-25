@@ -29,6 +29,6 @@ switch ($diaSemana) {
         echo "sabad0";
         break;
     default:
-    echo "algo deu errado";
+    echo "algo deu errado ";
        
 }
