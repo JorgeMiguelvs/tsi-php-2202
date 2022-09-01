@@ -7,7 +7,7 @@ else
 echo "5 não é maior que 10";
 
 ?>
-*/
+
 $diaSemana=9;
 switch ($diaSemana) {
     case 0:
@@ -29,6 +29,9 @@ switch ($diaSemana) {
         echo "sabad0";
         break;
     default:
-    echo "algo deu errado ";
+    echo "algo deu errado  ";
        
 }
+
+*/
+
