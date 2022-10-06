@@ -23,31 +23,36 @@ var_dump($aluno);
 
 */
 
-$aluno = [  0 => [  'matricula' => 634545, 
+$aluno = [  0 => [  'matricula' => 63454, 
 
                     'nome' => 'João',
 
-                    'semestre' => 2],
+                    'semestre' => 2,
+                     'idade'=>20   ],
 
-            1 => [  'matricula' => 8548, 
+            1 => [  'matricula' => 85485, 
 
                     'nome' => 'Paulo',
 
-                    'semestre' => 3],
+                    'semestre' => 3,
+                     'idade'=>19                   ],
 
             2 => [  'matricula' => 65422, 
 
                     'nome' => 'Maria',
 
-                    'semestre' => 1],
+                    'semestre' => 1,
+                    'idade'=>21],
 
             3=>[ 'matricula' => 87365,
                 'nome' => 'Jorge',
-                'semestre' => 5],
+                'semestre' => 5,
+                 'idade'=>22],
 
                 4 =>[ 'matricula' => 87365,
-                'nome' => 'Jorge',
-                'semestre' => 5]];
+                'nome' => 'Miguel',
+                'semestre' => 6,
+                'idade'=>23]];
 
 
                    echo '<table border ="1">
@@ -55,25 +60,39 @@ $aluno = [  0 => [  'matricula' => 634545,
                     <td>Matricula</td>
                     <td>Nome</td>
                     <td>Semestre</td>
+                    <td>Idade</td>
                    </tr>';
 
                    
-                   $matricula = $aluno[1];
+                   //$matricula = $aluno[1];
  
-                    for ($i = 0; $i < count($aluno); $i++)
-                    {
-                       echo "<tr>
-                        <td>{$aluno [$i]['matricula']}</td>
-                        <td>{$aluno [$i]['nome']}</td>
-                        <td>{$aluno [$i]['semestre']}</td>
+                    //for ($i = 0; $i < count($aluno); $i++)
+                    //{
+                      // echo "<tr>
+                       // <td>{$aluno [$i]['matricula']}</td>
+                       // <td>{$aluno [$i]['nome']}</td>
+                        //<td>{$aluno [$i]['semestre']}</td>
                         
-                        </tr>";
+                       // </tr>";
 
+                        
+                    //}
+
+                    foreach($aluno as $ind => $val){
+                        echo " <tr>
+                        <td>{$val['matricula']}</td>
+                        <td>{$val['nome']}</td>
+                        <td>{$val['semestre']}</td>
+                        <td>{$val['idade']}</td>
+                        </tr>
+                        ";
                         
                     }
 
+
                     echo '</table>';
 
+                    
                     
 
 
