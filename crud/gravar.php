@@ -12,12 +12,16 @@ $inicio = $_POST['inicio'];
 
 
 $objConsulta=$bd->prepare('INSERT INTO alunos (nome,turno,inicio)
-            VALUES (:nome,:turno,:inicio) ');
+                           VALUES (:nome,:turno,:inicio) ');
 
 
-/*
-A variavel objConsulta receba uma preparação 
-para juntar os dados do user com o sql 
+
+/* a funcção bindParam retorna outra variavel (objeto),
+essa outra variavel junta os dados do usuário com a consulta 
+do sql
+
+A função consulta subtitui os rotulos (ex..:'nome') 
+pelos dados inseguros
 */
 
 $objConsulta->bindParam('nome',$nome);
@@ -25,17 +29,12 @@ $objConsulta->bindParam('turno',$turno);
 $objConsulta->bindParam('inicio',$inicio);
 
 
-/*
-A variavel consulta subtitui os rotulos (ex..:'nome') 
-pelos dados inseguros
-*/
-
-
-
-if($objConsulta->execute()){
-    echo "foi ";
+if(false){
+    $gravou = true;
 } else{
-    echo "n foi ";
+    $gravou = false;
 }
+
+include 'index.php';
 
 //EXECUTA A CONSULTA NO SGBD
