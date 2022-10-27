@@ -13,21 +13,35 @@
 
 <?php 
 
+//msm de erro ou succeso p cadastra o aluno
+
+
 if (isset($gravou)) {
     if (!$gravou) {
         echo '"alerta" erro ao tentar gravar';
     }
     else
     {
-        echo '"alerta" cadastrado com sucesso';
+        echo '"alerta" gravou com sucesso';
+    }
+}
+
+if (isset($apagado)) {
+    if (!$apagado) {
+        echo '"alerta" erro ao tentar apagar';
+    }
+    else
+    {
+        echo '"alerta" apagado com sucesso';
     }
 }
 
 
 
 ?>
-    <div class ="container">
-        <table  class="table">
+          <form method='post'>
+            <div class="container">
+            <table  class="table">
             <thead>
                 <td>ID</td>
                 <td>nome</td>
@@ -44,13 +58,29 @@ if (isset($gravou)) {
                             <td>{$aluno['nome']}</td>
                             <td>{$aluno['turno']}</td>
                             <td>{$aluno['inicio']}</td>
-                            <td></td>
+                            <td>
+                            <button class ='btn btn-danger' 
+                            formaction='apagar.php' 
+                            value ='{$aluno['id']}'
+                            name='id'>Apagar
+                            </button>
+                            </td>
+
+                            <td>
+                            <button class ='btn btn-danger' 
+                            formaction='Editar.php' 
+                            value ='{$aluno['id']}'
+                            name='id'>Editar
+                            </button>
+                            </td>
+
                             </tr>    
                             ";
                          }
 
                  ?>
             </table>
+            </form>
     </div>
-</body>
+<a/body>
 </html>

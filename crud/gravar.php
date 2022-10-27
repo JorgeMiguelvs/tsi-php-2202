@@ -29,7 +29,7 @@ $objConsulta->bindParam('turno',$turno);
 $objConsulta->bindParam('inicio',$inicio);
 
 
-if(false){
+if($objConsulta->execute()){
     $gravou = true;
 } else{
     $gravou = false;
