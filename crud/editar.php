@@ -1,6 +1,7 @@
 <?php
 //buscando o codigo q nos conecta no banco de dados
 require_once '../bancoDeDados/connect.php';
+require_once '../controleDeSessao/controle.php';
 
 $id = $_POST['id'] ?? 0;
 

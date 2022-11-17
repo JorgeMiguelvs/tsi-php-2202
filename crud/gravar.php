@@ -2,6 +2,7 @@
 //buscando o codigo q nos conecta no sgbd
 
 require_once '../bancoDeDados/connect.php';
+require_once '../controleDeSessao/controle.php';
 //include_once não gera erro se não existir
 
 
